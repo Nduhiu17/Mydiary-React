@@ -1,0 +1,216 @@
+html,body{
+  height: 100%;
+  min-width: 190px;
+  margin: 0;
+}
+
+
+
+.main-container{
+display: flex;
+flex-direction: column;
+background-color: #1f9bc9;
+min-height: 100vh;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  color:#ffffff;
+  font-size: 12px;
+  line-height: 1.625rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.signup-home{
+  color: #A7CB00 !important;
+  padding: 1px;
+}
+
+.login-home{
+  padding: 1px;
+  color:#ffffff !important;
+}
+
+.logo{
+  display: flex;
+  margin-top: 0.5rem;
+  justify-content:space-around;
+  color:#ffffff;
+  font-size: 12vw;
+  font-family: 'Sofia';
+}
+
+.slogan{
+  display: flex;
+  margin-top: 0.5rem;
+  justify-content:space-around;
+  color: white;
+  font-size: 5vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+}
+
+.register-home-center{
+  display: flex;
+  justify-content:space-around;
+  padding-top: 5vh;
+}
+
+.register-button{
+  background-color: #a7cb00;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  padding-top: 1rem;
+  padding-bottom: 1.1rem;
+  width: 9.375rem;
+  line-height: 1rem;
+  text-align: center;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  margin-top: 1.4rem;
+  letter-spacing: -0.03rem;
+  border: 0px;
+}
+
+.p-footer{
+  padding-top: 10px;
+}
+
+.footer{
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  height: 3em;
+  position: fixed;
+  bottom: 0;
+}
+
+.signup-main-container{
+display: flex;
+flex-direction: column;
+min-height: 100%;
+}
+
+.signup-header{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  font-size: 12px;
+  line-height: 1.625rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 5px;
+  color:  #1f9bc9 !important;
+  text-transform: lowercase;
+  font-weight: 300;
+  letter-spacing: .1em;
+}
+
+.signup-signup-home{
+  padding: 1px;
+  margin: 0px 10px;
+  color:  #1f9bc9 !important;
+}
+
+.signup-login-home{
+  padding: 1px;
+  margin: 0px 10px;
+  color:  #1f9bc9 !important;
+}
+
+.signup-logo{
+  display: flex;
+  margin-top: 0.5rem;
+  justify-content:space-around;
+  color:#1f9bc9;
+  font-size: 9vw;
+  font-family: 'Sofia';
+  text-decoration: none !important;
+}
+
+.signup-slogan{
+  display: flex;
+  margin-top: 0;
+  justify-content:space-around;
+  color: #777;
+  font-size: 1.8vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.register-signup{
+  display: flex;
+  margin-top: 10vh;
+  justify-content:space-around;
+  color: #1f9bc9;
+  font-size: 1.8vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.registration-form{
+  display: flex;
+  justify-content:space-around;
+}
+
+form{
+  margin-top: 8vh;
+}
+
+.footer-main{
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: .1em;
+  font-size: .8em;
+  clear: both;
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  color: #777;
+  text-align: center;
+}
+
+.p-footer-main{
+  padding-top: 15px;
+}
+
+.card{
+  width: 100%;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1f9bc9 !important;
+  border-color: #1f9bc9 !important;
+  margin: 5px;
+}
+
+.entry-textarea{
+  width: 99%;
+  padding: 5px;
+  margin-left:5px;
+  border-top: 6vh solid #1f9bc9 !important;
+  border-bottom: 4vh solid #1f9bc9 !important;
+}
+
+.save-entry-button{
+  margin-left: 46%;
+  background-color: #1f9bc9 !important;
+  color: #fff;
+  width: fit-content;
+  border: #1f9bc9 !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+#search-form{
+  width: 40% !important;
+  margin-bottom: 20px;
+  margin-left: 30%;
+}
