@@ -17,7 +17,6 @@ export default class AddEntry extends Component {
         this.setState({ formData: formData});
         API.post(`/api/v1/entries`, formData)
         .then(res => {
-            // localStorage.setItem('token', res.data.access_token);
             this.props.history.push('/entries');
         });
     }
