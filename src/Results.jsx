@@ -22,7 +22,7 @@ export default class Results extends Component {
   render() {
     return (
         <div>
-            { this.state.entries.map(entry =>
+            { this.state.entries.reverse().map(entry =>
             <div class="card">
                 <div class="card-body">
                 <h5 class="card-title">{entry.title}</h5>
