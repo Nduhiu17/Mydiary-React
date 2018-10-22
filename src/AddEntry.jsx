@@ -1,8 +1,28 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import EntryForm from './EntryForm';
+import API from './api';
 
 
 export default class AddEntry extends Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            formData: {},
+        };
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    }
+
+    handleFormSubmit(formData) {
+        this.setState({ formData: formData});
+        API.post(`/api/v1/entries`, formData)
+        .then(res => {
+            // localStorage.setItem('token', res.data.access_token);
+            this.props.history.push('/entries');
+        });
+    }
+
+
   render() {
     return (
       <div>
@@ -20,9 +40,8 @@ export default class AddEntry extends Component {
             Pen down your thoughts and feelings
         </div>
         <div class="post-entry">
-            <textarea name="" id="entry-textarea" class="entry-textarea" rows="8">write an entry</textarea>
+           <EntryForm submitForm={this.handleFormSubmit}/>
         </div>
-        <button type="button" class="save-entry-button">Save entry</button>
         <div class="footer-main">
             <p class="p-footer-main">
                 &copy; 2018 Mydiary

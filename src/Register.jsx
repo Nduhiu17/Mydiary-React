@@ -1,8 +1,31 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import RegisterForm from './RegisterForm';
+import API from './api';
 
 
 export default class Register extends Component {
+
+    constructor (props) {
+        super(props);
+        this.state = {
+            formData: {},
+        };
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    }
+
+    handleFormSubmit(formData) {
+        this.setState({ formData: formData});
+        API.post(`/api/v1/auth/signup`, formData)
+        .then(res => {
+            if(res.status===201){
+                this.props.history.push('/entries');
+            }
+        });
+    }
+    
+    
+
   render() {
     return (
       <div>
@@ -27,22 +50,7 @@ export default class Register extends Component {
             Password registration
         </div>
         <div class="registration-form">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Repeat Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
-                </div>
-                <button type="submit" class="btn btn-primary">Register</button>
-            </form>
+         <RegisterForm submitForm={this.handleFormSubmit}/>
         </div>
         <div class="footer-main">
             <p class="p-footer-main">
